@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.container {
+    background-color: hsl(36, 100%, 99%);
+    width: 85%;
+    height: 100%;
+    margin: 30px auto;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.nav-bar .navigation {
+    display: flex;
+    flex: 1 1;
+    justify-content: flex-end !important;
+    align-items: center;
+}
+
+.nav-bar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .navigation a {
+    font-size: 13px;
+    padding-left: 25px;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nav-bar .navigation a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.main-carousel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+    gap: 30px;  
+    height: min-content;
+}
+
+.main-carousel article {
+    height: auto;
+}
+
+article .carousel-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+article .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+}
+
+article .main-content h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    margin: 0;
+    padding-right: 100px;
+}
+
+.main-content-description {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    padding: 0 30px;
+    justify-content: space-between;
+}
+
+.main-content .description {
+    font-size: 13px;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+
+.main-content-cta {
+    justify-content: flex-end;
+    width: 140px;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: none;
+    border-radius: 0px;
+    padding: 10px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: inset;
+}
+
+.main-content-cta:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+
+aside {
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    padding: 10px 40px;
+    height: min-content;
+    float: right;
+}
+
+aside .new-article {
+    color: hsl(35, 77%, 62%);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+aside .article {
+    padding-bottom: 20px;
+}
+
+aside .article-one,
+aside .article-two {
+    border-bottom: 0.5px solid hsl(233, 8%, 79%);
+}
+
+aside .article-two,
+aside .article-three {
+    padding-top: 20px;
+}
+
+aside .article-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+aside .article-title:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+aside .article-description {
+    font-size: 13px;
+    font-weight: 400;
+    color: hsl(233, 8%, 79%);
+    line-height: 1.5;
+}
+
+.others {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.other-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.other-description {
+    display: flex;
+    flex-direction: colum;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.other-content img {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.other-description span {
+    font-size: 28px;
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+    line-height: 1.5;
+}
+
+.other-description .title {
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(240, 100%, 5%);
+    padding: 10px 0px;
+}
+
+.other-description .title:hover {
+    color: hsl(35, 77%, 62%);;
+}
+
+.other-description .description {
+    font-size: 13px;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+    line-height: 1.5;
+    padding-top: 15px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%; 
+    }
+
+    .nav-bar .mobile-nav {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .nav-bar .menu-icon {
+        display: flex;
+        flex: 1 1;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav-bar .navigation {
+        display: none;
+    }
+
+    .main-carousel {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        overflow: hidden;
+        justify-content: left;
+        gap: 40px;  
+        height: min-content;
+    }
+
+    .main-carousel .mobile-carousel-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    article .carousel-img {
+        display: none;
+    }
+    
+    .main-carousel article {
+        height: auto;
+    }
+    
+    article img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    article .main-content {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        padding-top: 20px;
+    }
+    
+    article .main-content h1 {
+        font-size: 32px;
+        font-weight: 800;
+        color: hsl(240, 100%, 5%);
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main-content-description {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    
+    .main-content .description {
+        font-size: 13px;
+        font-weight: 400;
+        color: hsl(236, 13%, 42%);
+        line-height: 1.5;
+        padding-bottom: 30px;
+    }
+    
+    .main-content-cta {
+        justify-content: flex-end;
+        width: 140px;
+        background-color: hsl(5, 85%, 63%);
+        color: white;
+        border: none;
+        border-radius: 0px;
+        padding: 10px 0;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        box-shadow: inset;
+    }
+    
+    .main-content-cta:hover {
+        background-color: hsl(240, 100%, 5%);
+    }
+
+    aside {
+        background-color: hsl(240, 100%, 5%);
+        color: hsl(36, 100%, 99%);
+        padding: 10px 40px;
+        height: min-content;
+    }
+    
+    aside .new-article {
+        color: hsl(35, 77%, 62%);
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        padding: 20px 0;
+    }
+    
+    .others {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .other-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    .other-description {
+        display: flex;
+        flex-direction: colum;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+    
+    .other-content img {
+        width: 120px;
+        height: 140px;
+        object-fit: cover;
+    }
+    
+    .other-description span {
+        font-size: 24px;
+        font-weight: 700;
+        color: hsl(233, 8%, 79%);
+        line-height: 1.5;
+    }
+    
+    .other-description .title {
+        font-size: 14px;
+        font-weight: 700;
+        color: hsl(240, 100%, 5%);
+        padding: 5px 0px;
+    }
+    
+    .other-description .description {
+        font-size: 10pxpx;
+        font-weight: 400;
+        color: hsl(236, 13%, 42%);
+        line-height: 1.5;
+        padding-top: 5px;
+    }
+    
+    footer {
+        margin-top: 30px;
+    }
+
+    .overlay {
+        /* Height & width depends on how you want to reveal the overlay */   
+        height: 100%;
+        width: 100%;
+        position: fixed; /* Stay in place */
+        left: 0;
+        top: 0;
+        background-color: rgb(0,0,0); /* Black fallback color */
+        background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+      }
+
+      .overlay-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        z-index: 1;
+        transition: 0.7s;
+        background-color: hsl(36, 100%, 99%);  
+        overflow-x: hidden; /* Disable horizontal scroll */ 
+        padding-left: 20px; 
+        padding-top: 20px; 
+      }
+
+      .overlay-menu  {
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        justify-content: left;
+        padding-top: 70px;    
+    }
+
+    .overlay-menu a {
+        font-weight: 400;
+        font-size: 15px;
+        color: hsl(236, 13%, 42%);
+        text-decoration: none;
+        padding-bottom: 25px;
+        transition: 0.3s;
+    }
+    
+    .overlay-menu a:hover {
+        color: hsl(5, 85%, 63%);
+    }
+
+    .menu-close-icon {
+        display: flex;
+        flex: 1 1;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .overlay-content {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
